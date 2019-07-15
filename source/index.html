@@ -72,6 +72,81 @@
         </dl>
         <img class="advantages__image" src="http://placehold.it/157x320" width="157" height="320" alt="Демонстрация приложения">
       </section>
+      <section class="reviews">
+        <h2 class="visually-hidden">Отзывы пользователей</h2>
+        <ul class="reviews__list">
+          <li class="reviews__item reviews__item--active">
+            <blockquote class="reviews__comment">
+              <cite class="reviews__user-name">Николай Петров</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
+          </li>
+          <!--
+            Тут будут остальные блоки слайдера, по-моему их ещё нет в наших макетах
+           -->
+        </ul>
+        <div class="reviews__toggles">
+          <!--
+            Потом, когда я пойму, где надо вставить блок "slider", я примиксую элемент "slider__toggles" в div выше, поэтому элементы "slider__toggle" имеют смысл для переключателей
+           -->
+          <button class="slider__toggle">1</button>
+          <button class="slider__toggle">2</button>
+          <button class="slider__toggle">3</button>
+        </div>
+      </section>
+      <section class="prices">
+        <h2 class="visually-hidden">Тарифы</h2>
+          <table class="prices__table tariffs">
+            <tr>
+              <th class="tariffs__header">
+                <b class="tariffs__name">Стандарт</b>
+                <span class="tariffs__price">3,99 USD</span>
+              </th>
+            </tr>
+            <tr>
+              <td class="tariffs__cell">
+                Розовый фильтр
+              </td>
+            </tr>
+            <tr>
+              <td class="tariffs__cell">
+                Смайлики
+              </td>
+            </tr>
+            <tr>
+              <td class="tariffs__cell">
+                Комментарии
+              </td>
+            </tr>
+          </table>
+          <!--
+            Таблица будет продолжена по аналогии, когда будет макет со всеми блоками
+           -->
+          <div class="reviews__toggles">
+            <!--
+              См. строку 90
+             -->
+            <button class="slider__toggle">1</button>
+            <button class="slider__toggle">2</button>
+            <button class="slider__toggle">3</button>
+          </div>
+      </section>
+      <section class="contants">
+        <h2 class="contants__headline">Остались вопросы? Свяжитесь с нами!</h2>
+        <p class="call-us">
+          <span class="call-us__text">Звоните:</span>
+          <a class="call-us__number" href="tel:+78125556666">+7 (812) 555-66-66</a>
+        </p>
+        <p class="write-us">
+          <span class="write-us__text">Пишите:</span>
+          <a class="write-us__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="visit-us">
+          <span class="visit-us__text">Приезжайте в гости:</span>
+          <a class="visit-us__address" href="#">ул. Большая Конюшенная, 19/8</a>
+          <img class="visit-us__map map" src="http://placehold.it/320x645" width="320" height="645" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+      </section>
     </main>
   </body>
 
