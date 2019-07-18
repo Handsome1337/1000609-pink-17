@@ -4,34 +4,34 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
     <header class="site-header">
-      <a class="site-header__logo">
-        <svg class="site-header__logo-image" xmlns="http://www.w3.org/2000/svg" width="75" height="23" viewBox="0 0 74.426 22.859">
-          <!--
-            Розовый цвет логотипа добавлен для наглядности, в будущем цвет будет изменен на корректный белый
-          -->
-          <g fill="pink">
-            <path d="M0 1.449C0 .741.58.161 1.256.161h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373H2.544v6.825c0 .708-.58 1.288-1.288 1.288C.58 22.859 0 22.279 0 21.571V1.449zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917h5.57zM21.729 1.288C21.729.58 22.308 0 22.983 0c.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288V1.288zM30.87 1.32c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45V1.256A1.256 1.256 0 0 1 48.707 0c.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772L33.349 4.153v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256V1.32zM56.3 1.288C56.3.58 56.879 0 57.556 0c.708 0 1.287.58 1.287 1.288v12.331L71.689.451c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288V1.288z"/>
-          </g>
-        </svg>
-      </a>
+      <div class="site-header__top">
+        <a class="site-header__logo">
+          <svg class="site-header__logo-image" xmlns="http://www.w3.org/2000/svg" width="75" height="23" viewBox="0 0 74.426 22.859">
+            <g fill="#ffffff">
+              <path d="M0 1.449C0 .741.58.161 1.256.161h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373H2.544v6.825c0 .708-.58 1.288-1.288 1.288C.58 22.859 0 22.279 0 21.571V1.449zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917h5.57zM21.729 1.288C21.729.58 22.308 0 22.983 0c.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288V1.288zM30.87 1.32c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45V1.256A1.256 1.256 0 0 1 48.707 0c.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772L33.349 4.153v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256V1.32zM56.3 1.288C56.3.58 56.879 0 57.556 0c.708 0 1.287.58 1.287 1.288v12.331L71.689.451c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288V1.288z"/>
+            </g>
+          </svg>
+        </a>
+      </div>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="site-nav-list">
           <li class="site-nav-list__item">
-            <a>Главная</a>
+            <a class="site-nav-list__link">Главная</a>
           </li>
           <li class="site-nav-list__item">
-            <a href="photo.html">Фотографии</a>
+            <a class="site-nav-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-nav-list__item">
-            <a href="form.html">Конкурс</a>
+            <a class="site-nav-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-nav-list__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="site-nav-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -42,18 +42,18 @@
         <h2 class="visually-hidden">Скачайте приложение «Пинк»!</h2>
         <div class="download__presentation">
           <!-- Тут фоном будет здание -->
-          <img class="download__app-image" src="http://placehold.it/320x314" width="320" height="314" alt="Приложение в действии">
+          <img class="download__app-image" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Приложение в действии">
         </div>
         <a class="download__button" href="https://apps.apple.com/ru">Скачать приложение</a>
         <ul class="download__platform-list">
           <li class="download__platform-item">
-            <a href="https://apps.apple.com/ru">iOS</a>
+            <a class="download__link" href="https://apps.apple.com/ru">iOS</a>
           </li>
           <li class="download__platform-item">
-            <a href="https://play.google.com/store/apps">Android</a>
+            <a class="download__link" href="https://play.google.com/store/apps">Android</a>
           </li>
           <li class="download__platform-item">
-            <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">Windows</a>
+            <a class="download__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">Windows</a>
           </li>
         </ul>
         <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -70,7 +70,7 @@
           <dt class="advantages__item">Заводит новых друзей</dt>
           <dd class="advantages__item-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</dd>
         </dl>
-        <img class="advantages__image" src="http://placehold.it/157x320" width="157" height="320" alt="Демонстрация приложения">
+        <img class="advantages__image" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Демонстрация приложения">
       </section>
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы пользователей</h2>

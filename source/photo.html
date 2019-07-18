@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк - Фотографии Пользователей</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
         <!--
             Розовый цвет логотипа добавлен для наглядности, в будущем цвет будет изменен на корректный белый
           -->
-        <g fill="pink">
+        <g fill="#ffffff">
           <path d="M0 1.449C0 .741.58.161 1.256.161h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373H2.544v6.825c0 .708-.58 1.288-1.288 1.288C.58 22.859 0 22.279 0 21.571V1.449zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917h5.57zM21.729 1.288C21.729.58 22.308 0 22.983 0c.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288V1.288zM30.87 1.32c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45V1.256A1.256 1.256 0 0 1 48.707 0c.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772L33.349 4.153v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256V1.32zM56.3 1.288C56.3.58 56.879 0 57.556 0c.708 0 1.287.58 1.287 1.288v12.331L71.689.451c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288V1.288z"/>
         </g>
       </svg>
@@ -22,16 +23,16 @@
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="site-nav-list">
         <li class="site-nav-list__item">
-          <a href="index.html">Главная</a>
+          <a class="site-nav-list__link" href="index.html">Главная</a>
         </li>
         <li class="site-nav-list__item">
-          <a>Фотографии</a>
+          <a class="site-nav-list__link">Фотографии</a>
         </li>
         <li class="site-nav-list__item">
-          <a href="form.html">Конкурс</a>
+          <a class="site-nav-list__link" href="form.html">Конкурс</a>
         </li>
         <li class="site-nav-list__item">
-          <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="site-nav-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </li>
       </ul>
     </nav>
@@ -47,7 +48,7 @@
         <a class="users-posts__full-photo" href="#">
           <figure class="panorama">
             <figcaption class="panorama__text">Панорама дня</figcaption>
-            <img src="http://placehold.it/320x137" width="320" height="137" alt="Панорамная фотография">
+            <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорамная фотография">
           </figure>
         </a>
         <cite class="users-posts__user">Анна</cite>
@@ -59,7 +60,7 @@
         <li class="users-posts__item">
           <blockquote class="users-posts__post">
             <a class="users-posts__full-photo" href="#">
-              <img src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
+              <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
             </a>
             <cite class="users-posts__user">Левон</cite>
             <span class="users-posts__time">(5 часов назад)</span>
@@ -70,7 +71,7 @@
         <li class="users-posts__item">
           <blockquote class="users-posts__post">
             <a class="users-posts__full-photo" href="#">
-              <img src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
+              <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
             </a>
             <cite class="users-posts__user">Антон</cite>
             <span class="users-posts__time">(12 часов назад)</span>
@@ -81,7 +82,7 @@
         <li class="users-posts__item">
           <blockquote class="users-posts__post">
             <a class="users-posts__full-photo" href="#">
-              <img src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
+              <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
             </a>
             <cite class="users-posts__user">Борис</cite>
             <span class="users-posts__time">(20 часов назад)</span>
@@ -92,7 +93,7 @@
         <li class="users-posts__item">
           <blockquote class="users-posts__post">
             <a class="users-posts__full-photo" href="#">
-              <img src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
+              <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
             </a>
             <cite class="users-posts__user">Сергей</cite>
             <span class="users-posts__time">(25 часов назад)</span>
@@ -103,7 +104,7 @@
         <li class="users-posts__item">
           <blockquote class="users-posts__post">
             <a class="users-posts__full-photo" href="#">
-              <img src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
+              <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
             </a>
             <cite class="users-posts__user">Максим</cite>
             <span class="users-posts__time">(40 часов назад)</span>
@@ -114,7 +115,7 @@
         <li class="users-posts__item">
           <blockquote class="users-posts__post">
             <a class="users-posts__full-photo" href="#">
-              <img src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
+              <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
             </a>
             <cite class="users-posts__user">Надежда</cite>
             <span class="users-posts__time">(45 часов назад)</span>
