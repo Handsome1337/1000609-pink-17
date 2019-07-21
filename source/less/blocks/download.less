@@ -1,9 +1,5 @@
 .download {
-  background-color: #1d2631;
-}
-
-.download__presentation {
-  background: #283847 url("../../img/bg-back-mobile@1x.jpg") no-repeat;
+  position: relative;
 }
 
 .download__button,
@@ -16,10 +12,48 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+  text-align: center;
+
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.download__platform-list {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
+
+  list-style: none;
 }
 
 .download__availability {
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
+  text-align: center;
+
+  width: 280px;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .download__presentation {
+    position: absolute;
+    right: 0;
+  }
+
+  .download__button {
+    margin-left: 0;
+  }
+
+  .download__platform-list {
+    width: 300px;
+    margin-left: 0;
+  }
+
+  .download__availability {
+    width: 294px;
+  }
 }

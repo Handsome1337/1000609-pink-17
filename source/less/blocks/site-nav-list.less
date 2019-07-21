@@ -1,7 +1,27 @@
+.site-nav-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  /* Временно для сетки */
+  min-height: 252px;
+}
+
 .site-nav-list__link {
   font-size: 18px;
   line-height: 32px;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
+
+  background-color: #283645;
+}
+
+@media (min-width: @desktop-width) {
+  .site-nav-list {
+    display: flex;
+    margin-right: 10px;
+    /* Временно для сетки */
+    min-height: 110px;
+  }
 }
