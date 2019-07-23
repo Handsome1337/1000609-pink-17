@@ -1,20 +1,226 @@
 .advantages {
+  background-color: #ffffff;
+}
+
+.advantages__top {
   background-color: #f2f2f2;
+
+  overflow: hidden;
+}
+
+.advantages__bottom {
+  display: none;
+
+  background-color: #ffffff;
 }
 
 .advantages__offer {
   font-size: 24px;
   font-weight: 300;
+  text-align: center;
+
+  width: 230px;
+  margin: 0 auto;
 }
 
-.advantages__item {
+.advantages__list {
+  position: relative;
+
+  margin: 0 auto;
+  padding: 0;
+  /* Временно для сетки */
+  padding-bottom: 280px;
+  width: 280px;
+
+  list-style: none;
+}
+
+.advantages__list::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  right: 0;
+
+  width: 157px;
+  height: 320px;
+  margin-left: -78px;
+
+  background-image: url("../../img/iphone-screen-mobile@1x.png");
+}
+
+.advantages__option {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: #000000;
+  text-align: center;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.advantages__option-image {
+  display: none;
 }
 
 .advantages__item-description {
   font-size: 14px;
   line-height: 24px;
+  text-align: center;
+}
+
+.advantages__effect {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__message,
+.advantages__link {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.advantages__link {
+  color: #d22856;
+  text-decoration: underline;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__offer--long {
+    width: 620px;
+  }
+
+  .advantages__top-wrapper,
+  .advantages__bottom-wrapper {
+    position: relative;
+
+    width: 660px;
+    margin: 0 auto;
+  }
+
+  .advantages__list {
+    position: static;
+
+    width: 310px;
+    margin-right: 0;
+    /* Временно для сетки */
+    padding-bottom: 120px;
+  }
+
+  .advantages__list::after {
+    top: 0;
+    left: 0;
+
+    width: 268px;
+    height: 481px;
+    margin: 0;
+
+    background-image: url("../../img/iphone-screen-3-tablet@1x.png");
+  }
+
+  .advantages__option {
+    text-align: left;
+
+    margin-right: 0;
+  }
+
+  .advantages__item-description {
+    text-align: left;
+  }
+
+  .advantages__bottom {
+    z-index: 10;
+
+    display: block;
+  }
+
+  .advantages__bottom-right {
+    width: 310px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__top-wrapper,
+  .advantages__bottom-wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Временно для сетки*/
+    justify-content: space-around;
+    width: 940px;
+  }
+
+  .advantages__list::after {
+    display: none;
+  }
+
+  .advantages__item {
+    position: relative;
+
+    width: 190px;
+
+    padding-top: 302px;
+  }
+
+  .advantages__item::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 292px;
+    height: 302px;
+    margin-left: -146px;
+
+    background: no-repeat top center;
+  }
+
+  .advantages__item:nth-child(1)::before {
+    background-image: url("../../img/iphone-screen-1-desktop@1x.png");
+  }
+
+  .advantages__item:nth-child(2)::before {
+    background-image: url("../../img/iphone-screen-2-desktop@1x.png");
+  }
+
+  .advantages__item:nth-child(3)::before {
+    background-image: url("../../img/iphone-screen-3-desktop@1x.png");
+  }
+
+  .advantages__option {
+    text-align: center;
+
+    width: auto;
+  }
+
+  .advantages__option-image {
+    display: block;
+  }
+
+  .advantages__item-description {
+    text-align: center;
+
+    width: auto;
+  }
+
+  .advantages__bottom {
+    width: auto;
+
+    background-color: #f2f2f2;
+  }
+
+  .advantages__bottom-right {
+    width: 570px;
+  }
 }

@@ -1,11 +1,25 @@
 .users-posts__message {
   font-size: 14px;
   line-height: 30px;
+  text-align: center;
+
+  width: 250px;
+  margin: 0 auto;
 }
 
 .users-posts__best-post,
 .users-posts__item {
   background-color: #f2f2f2;
+}
+
+.users-posts__best-post {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.users-posts__post {
+  margin: 0;
 }
 
 .users-posts__user {
@@ -32,4 +46,74 @@
   line-height: 24px;
   color: #d22856;
   text-transform: uppercase;
+}
+
+.users-posts__list {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.users-posts__item {
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .users-posts__message {
+    width: 440px;
+  }
+
+  .users-posts__best-post {
+    width: 620px;
+  }
+
+  .users-posts__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 620px;
+  }
+
+  .users-posts__item {
+    width: 300px;
+    margin-right: 20px;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+
+  .users-posts__post {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .users-posts__comment {
+    /* Временно для сетки */
+    min-height: 48px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .users-posts__message {
+    width: 460px;
+  }
+
+  .users-posts__best-post {
+    width: 940px;
+  }
+
+  .users-posts__list {
+    width: 940px;
+  }
+
+  .users-posts__item:nth-child(even) {
+    margin-right: 20px;
+  }
+
+  .users-posts__item:nth-child(3n) {
+    margin-right: 0;
+  }
 }

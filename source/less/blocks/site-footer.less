@@ -1,0 +1,36 @@
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.site-footer--index-footer {
+  display: none;
+}
+
+.site-footer__logo {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .site-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 660px;
+  }
+
+  .site-footer__logo {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-footer {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
