@@ -1,4 +1,64 @@
-.contants__headline {
+.contacts {
+  position: relative;
+}
+
+.contacts__top,
+.contacts__wrapper {
+  position: relative;
+  z-index: 10;
+
+  width: 320px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+}
+
+.contacts__headline {
   font-size: 24px;
   font-weight: 300;
+  text-align: center;
+
+  width: 250px;
+  margin: 0 auto;
+}
+
+.contacts__wrapper {
+  /* Временно для сетки */
+  min-height: 477px;
+  background: linear-gradient(#ffffff 415px, transparent 415px),
+              url("../../img/bg-triangle-white-footer.svg") center bottom no-repeat;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -10;
+
+  width: 320px;
+  margin-left: -160px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    /* Картинка абсолютно спозиционирована, поэтому необходима минимальная высота */
+    min-height: 782px;
+  }
+
+  .contacts__top,
+  .contacts__wrapper {
+    width: 660px;
+  }
+
+  .contacts__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__top,
+  .contacts__wrapper {
+    width: 960px;
+  }
 }

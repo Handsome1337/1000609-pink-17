@@ -1,3 +1,37 @@
 .prices {
   background-color: #f2f2f2;
 }
+
+.prices__wrapper {
+  width: 320px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.prices__table {
+  transform: translateX(-260px);
+}
+
+.prices__toggles {
+  width: 90px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .prices__wrapper {
+    width: 660px;
+    padding: 0 20px;
+  }
+
+  .prices__table {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .prices__wrapper {
+    width: 960px;
+    padding: 0 10px;
+  }
+}

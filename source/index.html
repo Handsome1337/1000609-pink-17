@@ -100,6 +100,7 @@
           <li class="reviews__item reviews__item--active">
             <blockquote class="reviews__comment">
               <cite class="reviews__user-name">Николай Петров</cite>
+              <span class="reviews__user-about">25 лет, водитель трамвая</span>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
           </li>
@@ -118,55 +119,99 @@
       </section>
       <section class="prices">
         <h2 class="visually-hidden">Тарифы</h2>
+        <div class="prices__wrapper">
           <table class="prices__table tariffs">
             <tr>
+              <th class="tariffs__header tariffs__header--empty"></th>
+              <th class="tariffs__header">
+                <b class="tariffs__name">База</b>
+                <span class="tariffs__price">1,99 USD</span>
+              </th>
               <th class="tariffs__header">
                 <b class="tariffs__name">Стандарт</b>
                 <span class="tariffs__price">3,99 USD</span>
               </th>
+              <th class="tariffs__header">
+                <b class="tariffs__name">Анлим</b>
+                <span class="tariffs__price">9,99 USD</span>
+              </th>
             </tr>
             <tr>
+              <td class="tariffs__cell tariffs__cell--optional">
+                Розовый фильтр
+              </td>
+              <td class="tariffs__cell">
+                Розовый фильтр
+              </td>
+              <td class="tariffs__cell">
+                Розовый фильтр
+              </td>
               <td class="tariffs__cell">
                 Розовый фильтр
               </td>
             </tr>
             <tr>
+              <td class="tariffs__cell tariffs__cell--optional">
+                Смайлики
+              </td>
+              <td class="tariffs__cell">
+                Смайлики
+              </td>
+              <td class="tariffs__cell">
+                Смайлики
+              </td>
               <td class="tariffs__cell">
                 Смайлики
               </td>
             </tr>
             <tr>
+              <td class="tariffs__cell tariffs__cell--optional">
+                Комментарии
+              </td>
+              <td class="tariffs__cell">
+                Комментарии
+              </td>
+              <td class="tariffs__cell">
+                Комментарии
+              </td>
               <td class="tariffs__cell">
                 Комментарии
               </td>
             </tr>
           </table>
+        </div>
+        <!--
+          Таблица будет продолжена по аналогии, когда будет макет со всеми блоками
+          -->
+        <div class="prices__toggles">
           <!--
-            Таблица будет продолжена по аналогии, когда будет макет со всеми блоками
-           -->
-          <div class="reviews__toggles">
-            <!--
-              См. строку 115
-             -->
-            <button class="slider__toggle">1</button>
-            <button class="slider__toggle">2</button>
-            <button class="slider__toggle">3</button>
-          </div>
+            См. строку 115
+            -->
+          <button class="slider__toggle">1</button>
+          <button class="slider__toggle">2</button>
+          <button class="slider__toggle">3</button>
+        </div>
       </section>
-      <section class="contants">
-        <h2 class="contants__headline">Остались вопросы? Свяжитесь с нами!</h2>
-        <p class="call-us">
-          <span class="call-us__text">Звоните:</span>
-          <a class="call-us__number" href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </p>
-        <p class="write-us">
-          <span class="write-us__text">Пишите:</span>
-          <a class="write-us__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="visit-us">
-          <span class="visit-us__text">Приезжайте в гости:</span>
-          <a class="visit-us__address" href="#">ул. Большая Конюшенная, 19/8</a>
-          <img class="visit-us__map map" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <section class="contacts">
+          <div class="contacts__top">
+            <h2 class="contacts__headline">Остались вопросы? Свяжитесь с нами!</h2>
+          </div>
+          <div class="contacts__wrapper">
+          <p class="call-us">
+            <span class="call-us__text">Звоните:</span>
+            <a class="call-us__number" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </p>
+          <p class="write-us">
+            <span class="write-us__text">Пишите:</span>
+            <a class="write-us__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="visit-us">
+            <span class="visit-us__text">Приезжайте в гости:</span>
+            <a class="visit-us__address" href="#">ул. Большая Конюшенная, 19/8</a>
+          </p>
+        </div>
+        <p class="contacts__map">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </p>
       </section>
       <footer class="site-footer site-footer--index-footer">

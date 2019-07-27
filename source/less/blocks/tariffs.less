@@ -1,5 +1,26 @@
 .tariffs {
+  font-size: 14px;
+  line-height: 30px;
   text-transform: uppercase;
+
+  border-collapse: collapse;
+}
+
+.tariffs__header,
+.tariffs__cell {
+  min-width: 280px;
+}
+
+.tariffs__header--empty {
+  display: none;
+}
+
+.tariffs__cell {
+  border: 2px solid #e5e5e5;
+
+  &--optional {
+    display: none;
+  }
 }
 
 .tariffs__header {
@@ -10,19 +31,46 @@
 
 .tariffs__name {
   font-size: 18px;
-  line-height: 30px;
   font-weight: 700;
 }
 
 .tariffs__price {
-  font-size: 14px;
-  line-height: 30px;
   font-weight: 300;
 }
 
 .tariffs__cell {
-  font-size: 14px;
-  line-height: 30px;
-
   background-color: #ffffff;
+}
+
+
+@media (min-width: @tablet-width) {
+  .tariffs__header,
+  .tariffs__cell {
+    min-width: auto;
+    width: 155px;
+  }
+
+  .tariffs__cell {
+    font-size: 0;
+
+    &--optional {
+      font-size: 14px;
+    }
+  }
+
+  .tariffs__cell--optional,
+  .tariffs__header--empty {
+    display: table-cell;
+  }
+
+  .tariffs__header--empty {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tariffs__header,
+  .tariffs__cell {
+    width: 235px;
+  }
 }

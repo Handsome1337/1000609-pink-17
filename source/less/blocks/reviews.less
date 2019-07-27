@@ -1,3 +1,23 @@
+.reviews {
+  text-align: center;
+
+  width: 280px;
+  margin: 0 auto;
+}
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.reviews__comment {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
 .reviews__user-name {
   font-size: 18px;
   line-height: 30px;
@@ -6,7 +26,42 @@
   color: #000000;
 }
 
+.reviews__user-about {
+  font-size: 14px;
+  line-height: 30px;
+
+  display: none;
+}
+
 .reviews__text {
   font-size: 14px;
   line-height: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    width: 620px;
+  }
+
+  .reviews__user-about {
+    display: block;
+  }
+
+  .reviews__text {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    width: 940px;
+    padding-top: 185px;
+
+    background: url("../../img/icon-quotes.svg") center 70px no-repeat;
+  }
+
+  .reviews__comment {
+    width: 700px;
+    margin: 0 auto;
+  }
 }
