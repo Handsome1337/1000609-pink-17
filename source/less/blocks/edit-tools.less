@@ -1,0 +1,112 @@
+.edit-tools {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 240px;
+  margin: 0 auto;
+  /* Временно для стилей */
+  margin-bottom: 50px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.edit-tools__toddle-scale {
+  position: absolute;
+  top: 80px;
+  left: 0;
+
+  width: 240px;
+  height: 2px;
+
+  background-color: #283645;
+}
+
+.edit-tools__toddle-scale::before {
+  content: "";
+
+  position: absolute;
+  top: -7px;
+  left: 193px;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: #f2f2f2;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+}
+
+.edit-tools__item .edit-tools__toddle-scale {
+  display: none;
+}
+
+.edit-tools__item--active .edit-tools__toddle-scale {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .edit-tools {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+  }
+
+  .edit-tools__item {
+    position: relative;
+
+    display: block;
+    width: 100%;
+  }
+
+  .edit-tools__item .edit-tools__toddle-scale {
+    display: block;
+  }
+
+  .edit-tools__toddle-scale {
+    top: 50%;
+    left: 60px;
+
+    width: 202px;
+    margin-top: -3px;
+  }
+
+  .edit-tools__item--crop .edit-tools__toddle-scale::before {
+    left: 147px;
+  }
+
+  .edit-tools__item--fill .edit-tools__toddle-scale::before {
+    left: 25px;
+  }
+
+  .edit-tools__item--contrast .edit-tools__toddle-scale::before {
+    left: 96px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .edit-tools {
+    width: 410px;
+  }
+
+  .edit-tools__toddle-scale {
+    left: 90px;
+
+    width: 288px;
+  }
+
+  .edit-tools__item--crop .edit-tools__toddle-scale::before {
+    left: 71px;
+  }
+
+  .edit-tools__item--fill .edit-tools__toddle-scale::before {
+    left: 246px;
+  }
+
+  .edit-tools__item--contrast .edit-tools__toddle-scale::before {
+    left: 161px;
+  }
+}

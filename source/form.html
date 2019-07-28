@@ -43,9 +43,9 @@
   <main class="contest-main">
     <section class="contest">
       <h2 class="visually-hidden">Заполните форму участника конкурса</h2>
+      <p class="contest__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest__slogan-extra">Пожалуйста, заполните форму ниже:</span></p>
       <form class="contest__form" method="post" action="https://echo.htmlacademy.ru">
-        <div class="contest__participant-name">
-          <p class="contest__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        <fieldset class="contest__participant-name">
           <label class="contest__text-label">
             Фамилия:
             <input class="contest__text" type="text" name="last-name" placeholder="Укажите фамилию *">
@@ -58,9 +58,9 @@
             Отчество
             <input class="contest__text" type="text" name="patronymic" placeholder="Ну и отчество тоже">
           </label>
-        </div>
-        <div class="contest__achievements">
-          <p class="contest__subtitle">Ваши безбашенные достижения в путешествии</p>
+        </fieldset>
+        <fieldset class="contest__achievements">
+          <legend class="contest__subtitle">Ваши безбашенные достижения в путешествии</legend>
           <ul class="contest__checkbox-list">
           <li class="contest__checkbox-item">
             <label class="contest__checkbox-label">
@@ -99,19 +99,20 @@
             </label>
           </li>
         </ul>
-        </div>
-        <div class="contest__contacts">
-          <label class="contest__text-label">
-            Номер телефона
-            <input class="contest__text" type="tel" name="phone" placeholder="Номер, пожалуйста">
-          </label>
-          <label class="contest__text-label">
-            Адрес почты
-            <input class="contest__text" type="email" name="mail" placeholder="Введите почту *">
-          </label>
-        </div>
-        <div class="contest__apps">
-          <p class="contest__subtitle">С каким приложением путешествовали?</p>
+        </fieldset>
+        <fieldset class="contest__contacts">
+          <legend class="contest__subtitle">Контактная информация</legend>
+          <div class="contest__contacts-wrapper">
+            <label class="contest__text-label">Номер телефона
+              <input class="contest__text" type="tel" name="phone" placeholder="Номер, пожалуйста">
+            </label>
+            <label class="contest__text-label">Адрес почты
+              <input class="contest__text" type="email" name="mail" placeholder="Введите почту *">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="contest__apps">
+          <legend class="contest__subtitle">С каким приложением путешествовали?</legend>
           <ul class="contest__radio-list">
             <li class="contest__radio-item">
               <label class="contest__radio-label">
@@ -132,14 +133,17 @@
               </label>
             </li>
           </ul>
-        </div>
-        <div class="contest__message">
-          <label class="contest__text-label">Опишите свои эмоции
-            <textarea class="contest__story" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </label>
-        </div>
-        <button class="contest__button" type="submit">Отправить форму</button>
-        <small class="contest__mark"><span>*</span> — Обязательные поля</small>
+        </fieldset>
+        <fieldset class="contest__message">
+          <legend class="contest__subtitle">
+            <label class="contest__text-label" for="message">Опишите свои эмоции</label>
+          </legend>
+            <textarea class="contest__story" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </fieldset>
+        <p class="contest__send">
+          <button class="contest__button" type="submit">Отправить форму</button>
+          <small class="contest__mark"><span>*</span> — Обязательные поля</small>
+        </p>
       </form>
     </section>
   </main>
