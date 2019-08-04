@@ -108,10 +108,20 @@
   .contest__subtitle {
     background-color: inherit;
   }
+
+  .contest__text-label {
+    line-height: 30px;
+  }
 }
 
 .contest__story {
   width: 100%;
+  min-height: 201px;
+  padding: 20px;
+
+  border-radius: 2px;
+
+  resize: none;
 }
 
 .contest__send {
@@ -125,7 +135,6 @@
     border: 0;
   }
 }
-
 
 .contest__mark {
   margin: 0 auto;
@@ -155,7 +164,9 @@
   }
 
   .contest__slogan {
-    width: 435px;
+    font-size: 18px;
+
+    width: 500px;
     margin: 0 auto;
   }
 
@@ -169,13 +180,20 @@
 
   .contest__achievements,
   .contest__apps {
-    padding: 0 60px;
+    // padding: 0 60px;
 
     background-color: inherit;
     border: 2px solid #e5e5e5;
   }
 
+  .contest__checkbox-list,
+  .contest__radio-list {
+    margin: 0 60px;
+}
+
   .contest__subtitle {
+    line-height: 30px;
+
     padding: 0 30px;
 
     background-color: inherit;
@@ -183,7 +201,6 @@
 
   .contest__contacts {
     order: -1;
-    padding: 0 60px;
 
     border: 2px solid #e5e5e5;
 
@@ -198,6 +215,10 @@
     .contest__text {
       order: -1;
     }
+  }
+
+  .contest__contacts-wrapper {
+    margin: 0 60px;
   }
 
   .contest__apps {
@@ -251,6 +272,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 820px;
+    margin: 0 58px;
   }
 
   .contest__checkbox-item {

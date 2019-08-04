@@ -1,3 +1,9 @@
+.users-posts__top {
+  width: 320px;
+  margin: 56px auto;
+  padding: 0 20px;
+}
+
 .users-posts__message {
   font-size: 14px;
   line-height: 30px;
@@ -27,6 +33,11 @@
   line-height: 24px;
   font-weight: 700;
   font-style: normal;
+  vertical-align: baseline;
+
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 17px;
 }
 
 .users-posts__time {
@@ -34,24 +45,52 @@
   line-height: 24px;
   font-weight: 300;
   text-transform: uppercase;
+
+  margin-right: 17px;
 }
 
 .users-posts__comment {
   font-size: 14px;
   line-height: 24px;
+
+  margin: 0 17px 13px 17px;
 }
 
 .users-posts__like {
+  position: relative;
+
   font-size: 12px;
   line-height: 24px;
   color: #d22856;
   text-transform: uppercase;
+
+  margin: 0 17px 20px 17px;
+  padding: 0;
+  padding-left: 33px;
+
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    width: 13px;
+    height: 12px;
+
+    background: url("../img/icon-heart.svg") no-repeat;
+  }
 }
 
 .users-posts__list {
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
 
   list-style: none;
 }
@@ -62,18 +101,48 @@
 }
 
 @media (min-width: @tablet-width) {
+  .users-posts__top {
+    width: 660px;
+    margin: 95px auto 78px auto;
+  }
+
   .users-posts__message {
+    font-size: 18px;
+
     width: 440px;
   }
 
   .users-posts__best-post {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
     width: 620px;
+
+    .users-posts__user {
+      order: -3;
+    }
+
+    .users-posts__time {
+      order: -2;
+    }
+
+    .users-posts__like {
+      order: -1;
+      width: auto;
+      margin: 0 29px 0 auto;
+      padding-right: 30px;
+    }
+
+    .users-posts__comment {
+      min-height: auto;
+      margin-bottom: 27px;
+    }
   }
 
   .users-posts__list {
     display: flex;
     flex-wrap: wrap;
-    width: 620px;
+    width: 660px;
   }
 
   .users-posts__item {
@@ -87,16 +156,42 @@
 
   .users-posts__post {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    // flex-direction: column;
+  }
+
+  .users-posts__user {
+    margin: 28px 5px 0 28px;
   }
 
   .users-posts__comment {
     /* Временно для сетки */
     min-height: 48px;
+    margin: 0 32px 15px 28px;
+  }
+
+  .users-posts__like {
+    text-align: left;
+
+    width: 100%;
+    margin: 0 32px 25px 28px;
+    padding-left: 0;
+
+    &::before {
+      left: auto;
+      right: 0;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .users-posts__top {
+    width: 960px;
+    margin-bottom: 90px;
+    padding: 0 10px;
+  }
+
   .users-posts__message {
     width: 460px;
   }
@@ -106,7 +201,8 @@
   }
 
   .users-posts__list {
-    width: 940px;
+    width: 960px;
+    padding: 0 10px;
   }
 
   .users-posts__item:nth-child(even) {

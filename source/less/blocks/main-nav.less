@@ -1,12 +1,126 @@
-.main-nav {
+.main-nav__top-wrapper {
+  border-bottom: 1px solid #000000;
+}
+
+.main-nav__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 320px;
   margin: 0 auto;
+  padding: 20px;
+}
+
+.main-nav__logo:hover g,
+.main-nav__logo:focus g {
+  fill: #d22856;
+}
+
+.main-nav__logo:active g {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.main-nav__toggle {
+  position: relative;
+
+  display: block;
+  width: 50px;
+  height: 24px;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  .main-nav__cross-logo {
+    display: none;
+  }
+}
+
+.main-nav--closed {
+  .main-nav__toggle::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 4px;
+
+    background-color: #ffffff;
+    box-shadow: 0 10px 0 0 #ffffff,
+      0 20px 0 0 #ffffff;
+  }
+
+  .main-nav__toggle:hover::before,
+  .main-nav__toggle:focus::before {
+    background-color: #d22856;
+    box-shadow: 0 10px 0 0 #d22856,
+      0 20px 0 0 #d22856;
+  }
+
+  .main-nav__toggle:active::before {
+    opacity: 0.3;
+  }
+}
+
+.main-nav--opened {
+  background-color: #283645;
+
+  .main-nav__toggle {
+    width: 24px;
+  }
+
+  .main-nav__cross-logo {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    display: block;
+  }
+}
+
+.main-nav__toggle:hover path,
+.main-nav__toggle:focus path {
+  fill: #d22856;
+}
+
+.main-nav__toggle:active path {
+  opacity: 0.3;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@media (max-width: @not-desktop-width) {
+  .main-nav--closed .site-nav-list__item {
+    display: none;
+  }
+
+  .main-nav--nojs {
+    background-color: #283645;
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .site-nav-list__item {
+      display: block;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav {
+  .main-nav__top {
     width: 660px;
-    margin: 0 auto;
+    /* Временно для сетки */
+    min-height: 110px;
   }
 }
 
@@ -16,6 +130,21 @@
     justify-content: space-between;
     width: 960px;
     margin: 0 auto;
+    padding: 0 10px;
+
+    background-color: transparent;
+  }
+
+  .main-nav__top-wrapper {
+    align-self: center;
+  }
+
+  .main-nav__top {
+    width: auto;
+    min-height: auto;
+    padding: 0;
+
+    border: 0;
   }
 
   .main-nav__toggle {

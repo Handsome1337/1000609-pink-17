@@ -33,10 +33,15 @@
 .tariffs__name {
   font-size: 18px;
   font-weight: 700;
+
+  display: block;
 }
 
 .tariffs__price {
+  font-size: 24px;
   font-weight: 300;
+
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
@@ -59,8 +64,20 @@
     display: table-cell;
   }
 
+  .tariffs__cell--optional {
+    text-transform: none;
+  }
+
   .tariffs__header--empty {
     visibility: hidden;
+  }
+
+  .tariffs__name {
+    font-size: 16px;
+  }
+
+  .tariffs__price {
+    font-size: 18px;
   }
 }
 
@@ -68,5 +85,17 @@
   .tariffs__header,
   .tariffs__cell {
     width: 235px;
+  }
+
+  .tariffs__cell--optional {
+    font-size: 18px;
+  }
+
+  .tariffs__name {
+    font-size: 18px;
+  }
+
+  .tariffs__price {
+    font-size: 24px;
   }
 }

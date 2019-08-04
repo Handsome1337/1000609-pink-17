@@ -1,8 +1,33 @@
 .copyright {
   display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .copyright__text {
   font-size: 14px;
   line-height: 18px;
+
+  margin: 0;
+}
+
+.copyright__link:hover path,
+.copyright__link:focus path {
+  fill: #283645;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    font-size: 18px;
+  }
 }
