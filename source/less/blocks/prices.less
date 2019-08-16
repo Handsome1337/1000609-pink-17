@@ -1,5 +1,9 @@
 .prices {
-  background-color: #f2f2f2;
+  padding-top: 90px;
+  padding-bottom: 47px;
+
+  background: #f2f2f2 url("../img/bg-triangle-white.svg") no-repeat;
+  background-size: contain;
 }
 
 .prices__wrapper {
@@ -10,15 +14,23 @@
 }
 
 .prices__table {
+  margin-bottom: 40px;
+
   transform: translateX(-260px);
 }
 
 .prices__toggles {
+  text-align: center;
+
   width: 90px;
   margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
+  .prices {
+    padding-bottom: 28px;
+  }
+
   .prices__wrapper {
     width: 660px;
     padding: 0 20px;
@@ -27,9 +39,18 @@
   .prices__table {
     transform: translateX(0);
   }
+
+  .prices__toggles {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .prices {
+    padding-top: 148px;
+    padding-bottom: 55px;
+  }
+
   .prices__wrapper {
     width: 960px;
     padding: 0 10px;
