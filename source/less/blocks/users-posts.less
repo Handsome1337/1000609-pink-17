@@ -1,3 +1,7 @@
+.users-posts {
+  padding-bottom: 40px;
+}
+
 .users-posts__top {
   width: 320px;
   margin: 56px auto;
@@ -11,6 +15,11 @@
 
   width: 250px;
   margin: 0 auto;
+  margin-bottom: 5px;
+
+  &--headline {
+    margin-bottom: 0;
+  }
 }
 
 .users-posts__best-post,
@@ -90,6 +99,7 @@
 .users-posts__list {
   width: 320px;
   margin: 0 auto;
+  margin-bottom: 44px;
   padding: 0 20px;
 
   list-style: none;
@@ -101,6 +111,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .users-posts {
+    padding-bottom: 62px;
+  }
+
   .users-posts__top {
     width: 660px;
     margin: 95px auto 78px auto;
@@ -110,6 +124,11 @@
     font-size: 18px;
 
     width: 440px;
+    margin-bottom: 8px;
+
+    &--headline {
+      margin-bottom: 0;
+    }
   }
 
   .users-posts__best-post {
@@ -143,6 +162,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 660px;
+    margin-bottom: 50px;
   }
 
   .users-posts__item {

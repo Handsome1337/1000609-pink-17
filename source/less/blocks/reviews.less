@@ -3,6 +3,7 @@
 
   width: 280px;
   margin: 0 auto;
+  padding-top: 47px;
 }
 
 .reviews__list {
@@ -24,6 +25,8 @@
   font-weight: 700;
   font-style: normal;
   color: #000000;
+
+  margin-bottom: 20px;
 }
 
 .reviews__user-about {
@@ -36,32 +39,55 @@
 .reviews__text {
   font-size: 14px;
   line-height: 30px;
+
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.reviews__toggles {
+  margin-bottom: 42px;
+}
+
+.reviews__switchers {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .reviews {
     width: 620px;
+    padding-top: 17px;
   }
 
   .reviews__user-name {
     font-size: 20px;
+
+    margin-bottom: 9px;
   }
 
   .reviews__user-about {
     display: block;
+    margin-bottom: 35px;
   }
 
   .reviews__text {
     font-size: 18px;
 
     order: -1;
+    margin-bottom: 42px;
+  }
+
+  .reviews__toggles {
+    margin-bottom: 22px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews {
+    /* Временно для сетки, потом надо создать блок slider */
+    position: relative;
+
     width: 940px;
-    padding-top: 185px;
+    padding-top: 190px;
 
     background: url("../img/icon-quotes.svg") center 70px no-repeat;
   }
@@ -72,10 +98,60 @@
 
   .reviews__user-about {
     font-size: 18px;
+
+    margin-bottom: 43px;
   }
 
   .reviews__comment {
     width: 700px;
     margin: 0 auto;
+  }
+
+  .reviews__text {
+    margin-bottom: 45px;
+  }
+
+  .reviews__toggles {
+    display: none;
+  }
+
+  .reviews__switchers {
+    display: block;
+  }
+
+  .reviews__switcher {
+    position: absolute;
+    top: 215px;
+
+    font-size: 0;
+
+    width: 22px;
+    height: 41px;
+    padding: 0;
+
+    background: transparent url("../img/icon-review-arrow-left.svg") no-repeat;
+    border: 0;
+
+    opacity: 0.3;
+    cursor: pointer;
+
+    &--previous {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+
+      transform: scale(-1);
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 }

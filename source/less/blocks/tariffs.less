@@ -16,18 +16,42 @@
 }
 
 .tariffs__cell {
+  padding: 17px 22px;
+
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 
+  &--first-line {
+    border-top: 0;
+  }
+
   &--optional {
     display: none;
+  }
+
+  &--yes {
+    background-image: url("../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    background-position: top 21px right 15px;
+    background-size: 31px 21px;
+  }
+
+  &--no {
+    background-image: url("../img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: top 15px right 17px;
   }
 }
 
 .tariffs__header {
   color: #ffffff;
 
+  padding: 16px;
+
   background-color: #283645;
+  border: 2px solid #283645;
+  border-left-color: #e5e5e5;
+  border-right-color: #e5e5e5;
 }
 
 .tariffs__name {
@@ -35,6 +59,7 @@
   font-weight: 700;
 
   display: block;
+  margin-bottom: 5px;
 }
 
 .tariffs__price {
@@ -51,8 +76,16 @@
     width: 155px;
   }
 
+  .tariffs__header {
+    padding: 10px;
+  }
+
   .tariffs__cell {
     font-size: 0;
+
+    padding: 10px 15px;
+
+    background-position: center center;
 
     &--optional {
       font-size: 14px;
@@ -65,7 +98,14 @@
   .tariffs__header--empty {
     display: table-cell;
 
+    border-bottom-color: #e5e5e5;
+    border-right-color: #283645;
+
     visibility: hidden;
+  }
+
+  .tariffs__header:last-child {
+    border-right-color: #283645;
   }
 
   .tariffs__name {
@@ -81,6 +121,14 @@
   .tariffs__header,
   .tariffs__cell {
     width: 235px;
+  }
+
+  .tariffs__header {
+    padding: 16px 16px 20px;
+  }
+
+  .tariffs__cell {
+    padding: 19px 24px;
   }
 
   .tariffs__cell--optional {
