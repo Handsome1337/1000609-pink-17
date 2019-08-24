@@ -4,8 +4,8 @@
 
   width: 320px;
   margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 17px;
+  padding-top: 45px;
+  padding-bottom: 15px;
 }
 
 .contest__participant-name {
@@ -14,16 +14,21 @@
   order: -3;
   width: 280px;
   padding: 0;
-  margin: 0 auto 22px;
+  margin: 0 auto 25px;
 
   border: 0;
+}
+
+.contest__label {
+  display: block;
+  margin-left: 23px;
+  margin-bottom: 6px;
 }
 
 .contest__text {
   width: 100%;
 
-  margin-top: 7px;
-  padding: 15px 20px 14px;
+  padding: 12px 20px 15px;
 
   border: 2px solid #e5e5e5;
   border-radius: 2px;
@@ -39,7 +44,7 @@
   text-align: center;
 
   width: 280px;
-  margin: 0 auto 38px;
+  margin: 0 auto 34px;
 }
 
 .contest__slogan-extra {
@@ -50,7 +55,7 @@
   color: #d22856;
   text-transform: uppercase;
 
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   &:hover .contest__text {
     border-color: #283645;
@@ -71,7 +76,7 @@
 
 .contest__achievements-wrapper,
 .contest__apps-wrapper {
-  padding-top: 40px;
+  padding-top: 38px;
 
   background-color: #f2f2f2;
 }
@@ -79,7 +84,7 @@
 .contest__achievements,
 .contest__apps {
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   padding: 0 20px;
 
   border: 0;
@@ -97,15 +102,33 @@
 .contest__checkbox-list,
 .contest__radio-list {
   margin: 0;
-  margin-top: 47px;
   padding: 0;
 
   list-style: none;
 }
 
-.contest__checkbox-item,
+.contest__checkbox-list {
+  margin-top: 43px;
+}
+
+.contest__radio-list {
+  margin-top: 39px;
+}
+
+.contest__checkbox-item {
+  margin-bottom: 50px;
+
+  &:last-of-type {
+    margin-bottom: 45px;
+  }
+}
+
 .contest__radio-item {
-  margin-bottom: 30px;
+  margin-bottom: 43px;
+
+  &:last-of-type {
+    margin-bottom: 45px;
+  }
 }
 
 .contest__checkbox-label,
@@ -140,10 +163,11 @@
 
 .contest__checkbox-logo {
   position: absolute;
+  top: -6px;
   left: 0;
 
-  width: 35px;
-  height: 35px;
+  width: 39px;
+  height: 39px;
 
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
@@ -179,9 +203,10 @@
 .contest__radio-logo {
   position: absolute;
   left: 0;
+  top: -7px;
 
-  width: 37px;
-  height: 36px;
+  width: 39px;
+  height: 38px;
 
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
@@ -190,7 +215,7 @@
 
 .contest__contacts {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   padding: 0 20px;
 
   border: 0;
@@ -207,7 +232,7 @@
 
 .contest__message {
   width: 280px;
-  margin: 0 auto 40px;
+  margin: 0 auto 38px;
   padding: 0;
 
   border: 0;
@@ -220,8 +245,8 @@
 .contest__story {
   width: 100%;
   min-height: 201px;
-  margin-top: 12px;
-  padding: 20px;
+  margin-top: 10px;
+  padding: 14px 18px;
 
   border: 2px solid #e5e5e5;
   border-radius: 2px;
@@ -254,8 +279,8 @@
   text-transform: uppercase;
 
   width: 100%;
-  margin-bottom: 37px;
-  padding: 19px;
+  margin-bottom: 36px;
+  padding: 16px;
 
   background-color: #2aab6d;
   border: 0;
@@ -282,16 +307,20 @@
 
   font-size: 14px;
   text-transform: uppercase;
+}
 
-  span {
-    color: #d22856;
-  }
+.contest__note {
+  color: #d22856;
+}
+
+.contest__optional {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .contest {
     width: 660px;
-    padding: 98px 20px 50px;
+    padding: 92px 20px 51px;
   }
 
   .contest__form {
@@ -311,7 +340,7 @@
     font-size: 18px;
 
     width: 500px;
-    margin: 0 auto 72px;
+    margin: 0 auto 71px;
   }
 
   .contest__slogan-extra {
@@ -321,15 +350,24 @@
   .contest__text-label {
     display: flex;
     align-items: baseline;
-    margin-bottom: 48px;
+    margin-bottom: 52px;
   }
 
   .contest__participant-name {
-    margin-bottom: 10px;
+    margin-bottom: 0;
 
     .contest__text {
-      margin-left: 20px;
+      margin-left: 18px;
+      padding: 14px 20px 15px;
     }
+  }
+
+  .contest__label {
+    margin-left: 0;
+  }
+
+  .contest__text {
+    padding: 14px 18px 15px;
   }
 
   .contest__achievements-wrapper,
@@ -342,7 +380,7 @@
   .contest__achievements,
   .contest__apps,
   .contest__contacts {
-    margin-bottom: 52px;
+    margin-bottom: 51px;
     padding: 0;
 
     background-color: inherit;
@@ -351,12 +389,15 @@
 
   .contest__checkbox-list,
   .contest__radio-list {
-    margin: 0 60px;
+    margin: 0 58px;
   }
 
-  .contest__checkbox-item,
-  .contest__radio-item {
-    margin-bottom: 43px;
+  .contest__checkbox-item {
+    margin-bottom: 50px;
+
+    &:last-of-type {
+      margin-bottom: 51px;
+    }
   }
 
   .contest__checkbox-label,
@@ -388,7 +429,7 @@
       margin-bottom: 30px;
 
       &:last-child {
-        margin-bottom: 28px;
+        margin-bottom: 26px;
       }
     }
 
@@ -423,14 +464,13 @@
     }
 
     .contest__label {
-      margin-top: 12px;
-      margin-left: 20px;
+      margin: 9px 20px 0;
     }
   }
 
   .contest__achievements-wrapper .contest__subtitle,
   .contest__apps-wrapper .contest__subtitle {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .contest__apps-wrapper {
@@ -441,13 +481,13 @@
     }
 
     .contest__radio-list {
-      margin-bottom: 60px;
+      margin-bottom: 57px;
     }
   }
 
   .contest__message {
     margin-bottom: 67px;
-    padding: 0 60px;
+    padding: 0 58px;
 
     border: 2px solid #e5e5e5;
 
@@ -461,8 +501,9 @@
     }
 
     .contest__story {
+      min-height: 192px;
       margin-top: 0;
-      margin-bottom: 45px;
+      margin-bottom: 41px;
     }
   }
 
@@ -478,13 +519,14 @@
 
   .contest__mark {
     margin: 0;
+    margin-top: 4px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contest {
     width: 960px;
-    padding: 98px 10px 0;
+    padding: 92px 10px 0;
   }
 
   .contest__slogan {
@@ -497,23 +539,40 @@
     width: 435px;
   }
 
+  .contest__apps-wrapper .contest__subtitle {
+    margin-bottom: 44px;
+  }
+
+  .contest__radio-item {
+    margin-bottom: 42px;
+  }
+
+  .contest__checkbox-label,
+  .contest__radio-label {
+    padding-left: 58px;
+  }
+
   .contest__radio-list {
     margin-left: 75px;
   }
 
   .contest__participant-name {
     margin: 0;
+    margin-top: 20px;
+  }
+
+  .contest__achievements-wrapper .contest__subtitle {
+    margin-bottom: 41px;
   }
 
   .contest__checkbox-list {
     display: flex;
     flex-wrap: wrap;
     width: 820px;
-    margin: 0 58px 12px;
+    margin: 0 58px 7px;
   }
 
   .contest__checkbox-item {
-    // width: 260px;
     margin-right: 20px;
 
     &:first-child {
@@ -523,7 +582,7 @@
 
     &:nth-child(2) {
       order: 1;
-      margin-right: 96px;
+      margin-right: 97px;
     }
 
     &:nth-child(3) {
@@ -576,8 +635,17 @@
   .contest__message {
     margin-bottom: 65px;
 
-    .contest__story {
-      margin-bottom: 40px;
+    .contest__subtitle {
+      margin-bottom: 28px;
     }
+
+    .contest__story {
+      min-height: 128px;
+      margin-bottom: 33px;
+    }
+  }
+
+  .contest__optional {
+    display: inline;
   }
 }

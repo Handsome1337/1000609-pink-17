@@ -14,7 +14,7 @@
 .site-footer__logo {
   display: block;
   margin: 0 auto;
-  margin-bottom: 43px;
+  margin-bottom: 39px;
 
   &:hover g,
   &:focus g {
@@ -32,6 +32,14 @@
   }
 }
 
+.site-footer__logo-image {
+  display: none;
+
+  &--not-desktop {
+    display: inline;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .site-footer {
     display: flex;
@@ -40,11 +48,12 @@
     width: 660px;
     /* Минимальная высота для подвала сайта оправдана, так как изменения в эту часть сайта вносятся крайне редко, и в основном эти изменения направлены на добавление чего-нибудь, а не удаление */
     min-height: 127px;
-    padding: 0;
+    padding: 0 20px;
   }
 
   .site-footer__logo {
     margin: 0;
+    padding-bottom: 12px;
   }
 }
 
@@ -52,6 +61,37 @@
   .site-footer {
     width: 960px;
     margin: 0 auto;
+    padding: 0 10px;
     min-height: 197px;
+  }
+
+  .site-footer__logo:hover path,
+  .site-footer__logo:focus path {
+    fill: #d22856;
+  }
+
+  .site-footer__logo:active {
+    g {
+      opacity: 1;
+    }
+
+    path {
+      fill: #283645;
+      opacity: 0.3;
+    }
+
+    .exception {
+      fill: #d22856;
+    }
+  }
+
+  .site-footer__logo-image {
+    &--not-desktop {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline;
+    }
   }
 }
