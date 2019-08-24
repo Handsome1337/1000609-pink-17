@@ -16,7 +16,7 @@
 }
 
 .tariffs__cell {
-  padding: 17px 22px;
+  padding: 15px 22px 14px;
 
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
@@ -32,21 +32,23 @@
   &--yes {
     background-image: url("../img/icon-yes.svg");
     background-repeat: no-repeat;
-    background-position: top 21px right 15px;
+    background-position: top 20px right 19px;
     background-size: 31px 21px;
   }
 
   &--no {
     background-image: url("../img/icon-no.svg");
     background-repeat: no-repeat;
-    background-position: top 15px right 17px;
+    background-position: top 15px right 21px;
   }
 }
 
 .tariffs__header {
+  position: relative;
+
   color: #ffffff;
 
-  padding: 16px;
+  padding: 14px;
 
   background-color: #283645;
   border: 2px solid #283645;
@@ -59,7 +61,35 @@
   font-weight: 700;
 
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+
+  &--hit::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -2px;
+
+    width: 74px;
+    height: 73px;
+
+    background: url("../img/bg-hit.svg");
+  }
+
+  &--hit::after {
+    content: "Хит";
+
+    position: absolute;
+    top: 10px;
+    left: 9px;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    display: block;
+
+    transform: rotate(-45deg);
+  }
 }
 
 .tariffs__price {
@@ -67,6 +97,7 @@
   font-weight: 300;
 
   display: block;
+  margin-bottom: 4px;
 }
 
 @media (min-width: @tablet-width) {
@@ -83,7 +114,7 @@
   .tariffs__cell {
     font-size: 0;
 
-    padding: 10px 15px;
+    padding: 7px 15px 8px;
 
     background-position: center center;
 
@@ -110,10 +141,28 @@
 
   .tariffs__name {
     font-size: 16px;
+
+    margin-bottom: -3px;
+
+    &--hit::before {
+      left: 0;
+
+      width: 61px;
+      height: 61px;
+
+      background: url("../img/bg-hit-tablet.svg");
+    }
+
+    &--hit::after {
+      top: 2px;
+      left: 8px;
+    }
   }
 
   .tariffs__price {
     font-size: 18px;
+
+    margin-bottom: -2px;
   }
 }
 
@@ -124,11 +173,11 @@
   }
 
   .tariffs__header {
-    padding: 16px 16px 20px;
+    padding: 14px 16px 20px;
   }
 
   .tariffs__cell {
-    padding: 19px 24px;
+    padding: 14px 20px 15px;
   }
 
   .tariffs__cell--optional {
@@ -137,6 +186,20 @@
 
   .tariffs__name {
     font-size: 18px;
+
+    margin-bottom: 2px;
+
+    &--hit::before {
+      width: 74px;
+      height: 73px;
+
+      background: url("../img/bg-hit.svg");
+    }
+
+    &--hit::after {
+      top: 10px;
+      left: 12px;
+    }
   }
 
   .tariffs__price {

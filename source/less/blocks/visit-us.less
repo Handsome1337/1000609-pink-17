@@ -4,18 +4,20 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .visit-us__text {
   font-size: 18px;
   line-height: normal;
   font-weight: 700;
+
+  margin-bottom: 6px;
 }
 
 .visit-us__address {
   font-size: 24px;
-  line-height: normal;
+  line-height: 1.2;
   font-weight: 300;
   color: #d22856;
 }
@@ -23,16 +25,20 @@
 @media (min-width: @tablet-width) {
   .visit-us {
     width: 275px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .visit-us {
-    margin-bottom: 20px;
+    margin: 0 44px 23px 0;
   }
 
   .visit-us__text {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+  }
+
+  .visit-us__address {
+    margin-right: 3px;
   }
 }

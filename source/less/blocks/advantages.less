@@ -3,7 +3,7 @@
 }
 
 .advantages__header {
-  margin: 45px auto;
+  margin: 36px auto 30px;
 }
 
 .advantages__top {
@@ -17,7 +17,7 @@
 
 .advantages__bottom {
   display: none;
-  padding-bottom: 83px;
+  padding-bottom: 81px;
 
   background-color: #ffffff;
 }
@@ -30,6 +30,10 @@
 
   width: 230px;
   margin: 0 auto;
+
+  &--long {
+    margin-bottom: 21px;
+  }
 }
 
 .advantages__list {
@@ -37,7 +41,7 @@
 
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 280px;
+  padding-bottom: 285px;
   width: 280px;
 
   list-style: none;
@@ -47,7 +51,7 @@
 
     position: absolute;
     left: 50%;
-    bottom: -40px;
+    bottom: -44px;
 
     width: 157px;
     height: 320px;
@@ -63,7 +67,7 @@
 }
 
 .advantages__item {
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .advantages__option {
@@ -75,7 +79,7 @@
 
   display: block;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 }
 
 .advantages__option-image {
@@ -90,6 +94,10 @@
   margin: 0;
 }
 
+.advantages__br {
+  display: none;
+}
+
 .advantages__effect {
   font-size: 30px;
   line-height: 36px;
@@ -97,7 +105,7 @@
 
   width: 175px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 0;
 }
 
@@ -110,7 +118,7 @@
 .advantages__message {
   width: 296px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 }
 
 .advantages__link {
@@ -119,14 +127,26 @@
 }
 
 @media (min-width: @tablet-width) {
+  .advantages__header {
+    margin-top: 49px;
+    margin-bottom: 47px;
+  }
+
   .advantages__offer {
     font-size: 40px;
+    line-height: 1.2;
 
     width: 400px;
 
     &--long {
       width: 620px;
+      margin-bottom: 0;
     }
+  }
+
+  .advantages__top {
+    padding-top: 74px;
+    padding-bottom: 5px;
   }
 
   .advantages__top-wrapper,
@@ -135,6 +155,7 @@
 
     width: 660px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   .advantages__list {
@@ -145,8 +166,8 @@
     padding-bottom: 0;
 
     &::after {
-      top: -80px;
-      left: 0;
+      top: -70px;
+      left: 20px;
 
       width: 268px;
       height: 481px;
@@ -161,6 +182,10 @@
     }
   }
 
+  .advantages__item {
+    margin-bottom: 36px;
+  }
+
   .advantages__option {
     text-align: left;
 
@@ -169,6 +194,10 @@
 
   .advantages__item-description {
     text-align: left;
+  }
+
+  .advantages__br {
+    display: inline;
   }
 
   .advantages__bottom {
@@ -180,7 +209,7 @@
   .advantages__bottom-wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 59px;
+    padding-top: 60px;
   }
 
   .advantages__bottom-left {
@@ -192,7 +221,7 @@
 
     width: 238px;
     min-height: 276px;
-    padding-top: 75px;
+    padding-top: 76px;
 
     background: url("../img/icon-editor-diagram-fill.svg") no-repeat center 55px,
       url("../img/icon-timer.svg") no-repeat;
@@ -202,14 +231,21 @@
 
   .advantages__bottom-right {
     width: 310px;
-    margin-top: 43px;
+    margin-top: 37px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__header {
+    margin-top: 67px;
+    margin-bottom: 88px;
+  }
+
   .advantages__top {
     padding-top: 0;
-    padding-bottom: 73px;
+    padding-bottom: 66px;
+
+    overflow: visible;
   }
 
   .advantages__offer {
@@ -226,14 +262,15 @@
   .advantages__bottom-wrapper {
     width: 960px;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    /* Временно для сетки*/
-    justify-content: space-around;
-    width: 940px;
+    justify-content: space-between;
+    width: 880px;
+    margin: 0 auto;
 
     &::after {
       display: none;
@@ -246,18 +283,18 @@
     width: 240px;
 
     margin-bottom: 0;
-    padding-top: 302px;
+    padding-top: 345px;
 
     &::before {
       content: "";
 
       position: absolute;
-      top: 0;
+      top: -13px;
       left: 50%;
 
       width: 292px;
       height: 302px;
-      margin-left: -146px;
+      margin-left: -143px;
 
       background: no-repeat top center;
 
@@ -267,6 +304,8 @@
     }
 
     &:nth-child(1)::before {
+      margin-left: -146px;
+
       background-image: url("../img/iphone-screen-1-desktop@1x.png");
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -295,6 +334,8 @@
     font-size: 30px;
     line-height: 30px;
     text-align: center;
+
+    margin-bottom: 24px;
   }
 
   .advantages__option-image {
@@ -307,9 +348,13 @@
     text-align: center;
   }
 
+  .advantages__br {
+    display: none;
+  }
+
   .advantages__bottom {
     width: auto;
-    padding-bottom: 115px;
+    padding-bottom: 67px;
 
     background-color: #f2f2f2;
   }
@@ -319,9 +364,11 @@
   }
 
   .advantages__bottom-left {
+    font-size: 120px;
+
     width: 298px;
     min-height: 345px;
-    padding-top: 120px;
+    padding-top: 95px;
 
     background-position: center 70px,
       left top;
@@ -330,15 +377,15 @@
   }
 
   .advantages__bottom-right {
-    width: 570px;
-    margin-top: 97px;
+    width: 574px;
+    margin-top: 95px;
   }
 
   .advantages__effect {
     line-height: 30px;
 
     width: auto;
-    margin-bottom: 35px;
+    margin-bottom: 23px;
   }
 
   .advantages__message,
@@ -349,7 +396,7 @@
 
   .advantages__message {
     width: 526px;
-    margin-bottom: 35px;
+    margin-bottom: 31px;
   }
 
   .advantages__effect-space,

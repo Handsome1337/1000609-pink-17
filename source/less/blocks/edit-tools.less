@@ -3,11 +3,10 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
   width: 240px;
   margin: 0 auto;
-  margin-bottom: 114px;
+  margin-bottom: 110px;
   padding: 0;
 
   list-style: none;
@@ -16,6 +15,14 @@
 .edit-tools__item {
   path {
     opacity: 0.3;
+  }
+
+  &--crop {
+    margin: 0 35px 0 16px;
+  }
+
+  &--fill {
+    margin: 3px 39px 0 0;
   }
 
   &--active .edit-tools__image-fill,
@@ -43,8 +50,8 @@
 
 .edit-tools__toddle-scale {
   position: absolute;
-  top: 80px;
-  left: 0;
+  top: 84px;
+  left: -2px;
 
   width: 240px;
   height: 2px;
@@ -87,7 +94,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 275px;
-    margin: 9px 0 41px auto;
+    margin: 9px 0 38px auto;
   }
 
   .edit-tools__item {
@@ -95,14 +102,15 @@
 
     display: block;
     width: 100%;
-    margin-bottom: 27px;
-    padding-bottom: 24px;
+    margin: 0;
+    margin-bottom: 28px;
+    padding-bottom: 21px;
 
     border-bottom: 1px solid #dddfe0;
 
     &--fill {
       margin-bottom: 26px;
-      padding-bottom: 23px;
+      padding-bottom: 19px;
 
       .edit-tools__toddle-scale {
         top: 50% - 26px;
@@ -110,10 +118,10 @@
     }
 
     &--contrast {
-      padding-bottom: 27px;
+      padding-bottom: 24px;
 
       .edit-tools__toddle-scale {
-        top: 50% - 27px;
+        top: 50% - 26px;
       }
     }
 
@@ -128,7 +136,7 @@
   }
 
   .edit-tools__toddle-scale {
-    top: 50% - 24px;
+    top: 50% - 21px;
     left: 55px;
 
     width: 202px;
@@ -171,31 +179,32 @@
 @media (min-width: @desktop-width) {
   .edit-tools {
     width: 410px;
-    margin-bottom: 131px;
+    margin-top: 0;
+    margin-bottom: 128px;
   }
 
   .edit-tools__item {
-    margin-bottom: 15px;
-    padding-bottom: 13px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
 
     .edit-tools__toddle-scale {
-      top: 50% - 13px;
+      top: 50% - 8px;
     }
 
     &--fill {
       margin-bottom: 18px;
-      padding-bottom: 14px;
+      padding-bottom: 8px;
 
       .edit-tools__toddle-scale {
-        top: 50% - 14px;
+        top: 50% - 10px;
       }
     }
 
     &--contrast {
-      padding-bottom: 19px;
+      padding-bottom: 16px;
 
       .edit-tools__toddle-scale {
-        top: 50% - 19px;
+        top: 50% - 15px;
       }
     }
   }

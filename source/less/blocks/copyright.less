@@ -9,11 +9,20 @@
   line-height: 18px;
 
   margin: 0;
+  margin-right: 16px;
 }
 
-.copyright__link:hover path,
-.copyright__link:focus path {
-  fill: #283645;
+.copyright__link {
+  &:hover path,
+  &:focus path {
+    fill: #283645;
+  }
+
+  svg {
+    margin-top: 6px;
+
+    transform: scale(1.5);
+  }
 }
 
 .copyright__link:active {
@@ -23,6 +32,16 @@
 @media (min-width: @tablet-width) {
   .copyright {
     margin-bottom: 0;
+  }
+
+  .copyright__text {
+    margin-right: 15px;
+  }
+
+  .copyright__link svg {
+    margin-top: 10px;
+
+    transform: scale(1.5);
   }
 }
 
