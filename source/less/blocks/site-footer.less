@@ -12,28 +12,28 @@
 }
 
 .site-footer__logo {
+  color: #283645;
+
   display: block;
   margin: 0 auto;
   margin-bottom: 39px;
 
-  &:hover g,
-  &:focus g {
-    fill: #d22856;
+  &:hover,
+  &:focus {
+    color: #d22856;
   }
 
-  &:active g {
-    fill: #283645;
-    opacity: 0.3;
-  }
+  &:active {
+    color: #283645;
 
-  &:active path.glasses {
-    fill: #d22856;
     opacity: 0.3;
   }
 }
 
 .site-footer__logo-image {
   display: none;
+
+  fill: #d22856;
 
   &--not-desktop {
     display: inline;
@@ -63,26 +63,6 @@
     margin: 0 auto;
     padding: 0 10px;
     min-height: 197px;
-  }
-
-  .site-footer__logo:hover path,
-  .site-footer__logo:focus path {
-    fill: #d22856;
-  }
-
-  .site-footer__logo:active {
-    g {
-      opacity: 1;
-    }
-
-    path {
-      fill: #283645;
-      opacity: 0.3;
-    }
-
-    .exception {
-      fill: #d22856;
-    }
   }
 
   .site-footer__logo-image {
