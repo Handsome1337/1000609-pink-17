@@ -10,16 +10,18 @@
   padding: 21px;
 }
 
-.main-nav__logo:hover g,
-.main-nav__logo:focus g {
+.main-nav__logo:hover .main-nav__logo-image,
+.main-nav__logo:focus .main-nav__logo-image {
   fill: #d22856;
 }
 
-.main-nav__logo:active g {
+.main-nav__logo:active .main-nav__logo-image {
   fill: rgba(255, 255, 255, 0.3);
 }
 
 .main-nav__logo-image {
+  fill: #ffffff;
+
   display: none;
 
   &--mobile {
@@ -41,6 +43,8 @@
 
   .main-nav__cross-logo {
     display: none;
+
+    fill: #ffffff;
   }
 }
 
@@ -77,6 +81,15 @@
 
   .main-nav__toggle {
     width: 24px;
+
+    &:hover svg,
+    &:focus svg {
+      fill: #d22856;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 
   .main-nav__cross-logo {
@@ -87,15 +100,6 @@
 
     display: block;
   }
-}
-
-.main-nav__toggle:hover path,
-.main-nav__toggle:focus path {
-  fill: #d22856;
-}
-
-.main-nav__toggle:active path {
-  opacity: 0.3;
 }
 
 .main-nav__list {
@@ -125,18 +129,10 @@
 
 @media (min-width: @tablet-width) {
   .main-nav__top {
+    align-items: flex-end;
     width: 660px;
     padding-top: 27px;
     padding-bottom: 39px;
-  }
-
-  .main-nav__logo:hover path,
-  .main-nav__logo:focus path {
-    fill: #d22856;
-  }
-
-  .main-nav__logo:active path {
-    fill: rgba(255, 255, 255, 0.3);
   }
 
   .main-nav__logo-image {
@@ -173,8 +169,15 @@
   }
 
   .main-nav__logo {
+    color: #d22856;
+
     margin-bottom: 12px;
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
+
 
   .main-nav__logo-image {
     &--tablet {
