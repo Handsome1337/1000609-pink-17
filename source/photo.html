@@ -210,31 +210,37 @@
           </picture>
           <div class="new-post__actions">
             <ul class="new-post__edit edit-tools">
-              <li class="edit-tools__item edit-tools__item--active edit-tools__item--crop">
-                <svg class="edit-tools__item-image edit-tools__item-image--crop" role="img" aria-labelledby="heading-crop" width="48" height="48" focusable="false">
-                  <title id="heading-crop">Обрезка</title>
-                  <use xlink:href="img/sprite.min.svg#icon-crop"></use>
-                </svg>
+              <li class="edit-tools__item edit-tools__item--crop">
+                <button class="edit-tools__option edit-tools__option--active" type="button" aria-label="Обрезка">
+                  <svg class="edit-tools__option-image edit-tools__option-image--crop" role="img" aria-labelledby="heading-crop" width="48" height="48" focusable="false">
+                    <title id="heading-crop">Иконка обрезки</title>
+                    <use xlink:href="img/sprite.min.svg#icon-crop"></use>
+                  </svg>
+                </button>
                 <div class="edit-tools__toddle-scale">
-                  <span class="edit-tools__toddler">Ползунок</span>
+                  <button class="edit-tools__toddler" type="button">Ползунок</button>
                 </div>
               </li>
               <li class="edit-tools__item edit-tools__item--fill">
-                <svg class="edit-tools__item-image edit-tools__item-image--fill" role="img" aria-labelledby="heading-fill" width="48" height="48" focusable="false">
-                  <title id="heading-fill">Заливка</title>
-                  <use xlink:href="img/sprite.min.svg#icon-fill"></use>
-                </svg>
+                <button class="edit-tools__option" type="button" aria-label="Заливка">
+                  <svg class="edit-tools__option-image edit-tools__option-image--fill" role="img" aria-labelledby="heading-fill" width="48" height="48" focusable="false">
+                    <title id="heading-fill">Иконка заливки</title>
+                    <use xlink:href="img/sprite.min.svg#icon-fill"></use>
+                  </svg>
+                </button>
                 <div class="edit-tools__toddle-scale">
-                  <span class="edit-tools__toddler">Ползунок</span>
+                  <button class="edit-tools__toddler" type="button">Ползунок</button>
                 </div>
               </li>
               <li class="edit-tools__item edit-tools__item--contrast">
-                <svg class="edit-tools__item-image edit-tools__item-image--contrast" role="img" aria-labelledby="heading-contrast" width="32" height="32" focusable="false">
-                  <title id="heading-contrast">Контрастность</title>
-                  <use xlink:href="img/sprite.min.svg#icon-contrast"></use>
-                </svg>
+                <button class="edit-tools__option" type="button" aria-label="Контрастность">
+                  <svg class="edit-tools__option-image edit-tools__option-image--contrast" role="img" aria-labelledby="heading-contrast" width="32" height="32" focusable="false">
+                    <title id="heading-contrast">Иконка контрастности</title>
+                    <use xlink:href="img/sprite.min.svg#icon-contrast"></use>
+                  </svg>
+                </button>
                 <div class="edit-tools__toddle-scale">
-                  <span class="edit-tools__toddler">Ползунок</span>
+                  <button class="edit-tools__toddler" type="button">Ползунок</button>
                 </div>
               </li>
             </ul>
