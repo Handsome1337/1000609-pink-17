@@ -233,6 +233,14 @@
     width: 310px;
     margin-top: 37px;
   }
+
+  .advantages__message-space {
+    display: none;
+
+    &--tablet {
+      display: inline;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -399,12 +407,15 @@
     margin-bottom: 31px;
   }
 
-  .advantages__effect-space,
-  .advantages__message-space {
+  .advantages__effect-space {
     display: none;
   }
 
-  .advantages__message-space--always {
+  .advantages__message-space {
     display: inline;
+
+    &--tablet {
+      display: none;
+    }
   }
 }

@@ -2,7 +2,7 @@
 
 var gulp = require("gulp");
 
-var posthtml = require("gulp-posthtml");
+var htmlmin = require("gulp-htmlmin");
 
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
@@ -14,12 +14,16 @@ var rename= require("gulp-rename");
 
 var server = require("browser-sync").create();
 
+var uglify = require("gulp-uglify");
+var concat = require("gulp-concat");
+
 var imagemin = require("gulp-imagemin");
 
 var del = require("del");
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
+  .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest("build"));
 });
 
@@ -56,20 +60,26 @@ gulp.task("refresh", function (done) {
   done();
 });
 
+gulp.task("js", function () {
+  return gulp.src(["source/js/*.js", "node_modules/svgxuse/svgxuse.js", "node_modules/picturefill/dist/picturefill.js"])
+  .pipe(concat("script.min.js"))
+  .pipe(uglify())
+  .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("source/img/original/*.{jpg,png}")
   .pipe(imagemin([
     imagemin.jpegtran({progressive: true}),
     imagemin.optipng({optimizationLevel: 3})
   ]))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**"
+    "source/img/*.*"
   ], {
     base: "source"
   })
@@ -80,10 +90,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-/* Задача "images" опциональна. Можно было бы оптимизировать изображения в source,
-и тогда задачи "build" и "start" работали бы гораздо быстрее, но мне кажется, что
-в source логичнее иметь оригиналы изображений. Либо можно создать отдельную папку
-в source/img для оригиналов изоображений, например, source/img/orig, в ней оставить
-оригиналы, а в source/img оставить оптимизированные изображения */
-gulp.task("build", gulp.series("clean", "copy", "html", "css", "images"));
+gulp.task("build", gulp.series("clean", "html", "copy", "css", "js"));
 gulp.task("start", gulp.series("build", "server"));

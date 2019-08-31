@@ -1,0 +1,182 @@
+@keyframes popup {
+  from {
+    transform: translate(-50%, -50%) scale(6);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10000;
+
+  text-align: center;
+
+  width: 320px;
+
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+
+  transform: translate(-50%, -50%);
+
+  animation: popup 0.5s ease-out;
+}
+
+.modal--closed {
+  display: none;
+}
+
+.modal--error,
+.modal--notification {
+  padding-top: 40px;
+}
+
+.modal__wrapper {
+  padding: 0 20px;
+}
+
+.modal__headline {
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px;
+
+  margin: 0 0 25px;
+  padding: 0;
+}
+
+.modal__message {
+  font-size: 14px;
+  line-height: 24px;
+
+  margin: 0 0 39px;
+
+  &--notification {
+    margin-bottom: 32px;
+  }
+}
+
+.modal__button-wrapper {
+  padding: 0 20px;
+
+  background-color: #f2f2f2;
+}
+
+.modal--error .modal__button-wrapper {
+  background-color: transparent;
+}
+
+.modal__button {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 14px 15px 19px;
+
+  background-color: #2aab6d;
+  border: 0;
+  border-radius: 2px;
+
+  &--notification {
+    margin-top: 48px;
+    margin-bottom: 52px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #1c9b5e;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 460px;
+  }
+
+  .modal--error,
+  .modal--notification {
+    padding-top: 36px;
+  }
+
+  .modal__wrapper,
+  .modal__button-wrapper {
+    padding: 0;
+  }
+
+  .modal__headline {
+    font-size: 30px;
+    line-height: 40px;
+
+    width: 240px;
+    margin: 0 auto 22px;
+  }
+
+  .modal__message {
+    font-size: 18px;
+
+    width: 320px;
+    margin: 0 auto 38px;
+
+    &--notification {
+      margin-bottom: 35px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .modal__button {
+    width: 300px;
+    margin-bottom: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal {
+    width: 780px;
+  }
+
+  .modal--error,
+  .modal--notification {
+    padding-top: 42px;
+  }
+
+  .modal__headline {
+    width: 460px;
+  }
+
+  .modal__message {
+    width: 400px;
+    margin-bottom: 62px;
+
+    &--notification {
+      margin-bottom: 38px;
+    }
+  }
+
+  .modal--error .modal__button-wrapper {
+    background-color: #f2f2f2;
+  }
+
+  .modal__button {
+    margin-top: 48px;
+  }
+}
