@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк - Конкурс</title>
-    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link  rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
@@ -122,12 +125,12 @@
               <label class="contest__text-label">
                 <span class="contest__contacts-logo contest__contacts-logo--telephone"></span>
                 <span class="contest__label">Номер телефона</span>
-                <input class="contest__text" type="tel" name="phone" pattern="[0-9\s\-\+\(\)]{2,20}" placeholder="Номер, пожалуйста">
+                <input class="contest__text" type="tel" name="phone" pattern="[0-9\s\.\-\+\(\)]{2,20}" placeholder="Номер, пожалуйста">
               </label>
               <label class="contest__text-label">
                 <span class="contest__contacts-logo contest__contacts-logo--email"></span>
                 <span class="contest__label">Адрес почты</span>
-                <input class="contest__text" type="email" name="mail" required placeholder="Введите почту *">
+                <input class="contest__text" type="email" name="mail" pattern="[\w.-]+@[\w.-]+\.[A-Za-z]{2,4}" required placeholder="Введите почту *">
               </label>
             </div>
           </fieldset>
@@ -195,6 +198,28 @@
         </a>
       </div>
     </footer>
+
+    <section class="modal modal--error modal--closed">
+      <div class="modal__wrapper">
+        <h2 class="modal__headline">Что-то пошло не так!</h2>
+        <p class="modal__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+      <div class="modal__button-wrapper">
+        <button class="modal__button">OK</button>
+      </div>
+    </section>
+    <section class="modal modal--notification modal--closed">
+      <div class="modal__wrapper">
+        <h2 class="modal__headline">Ваша заявка отправлена</h2>
+        <p class="modal__message modal__message--notification">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и <br> оповестим вас.</p>
+      </div>
+      <div class="modal__button-wrapper">
+        <button class="modal__button modal__button--notification">Закрыть окно</button>
+      </div>
+    </section>
+    <div class="overlay overlay--closed"></div>
+
+    <script src="js/script.min.js" defer></script>
   </body>
 
 </html>
