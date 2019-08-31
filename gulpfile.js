@@ -35,6 +35,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -62,7 +63,9 @@ gulp.task("refresh", function (done) {
 
 gulp.task("js", function () {
   return gulp.src(["source/js/*.js", "node_modules/svgxuse/svgxuse.js", "node_modules/picturefill/dist/picturefill.js"])
-  .pipe(concat("script.min.js"))
+  .pipe(concat("script.js"))
+  .pipe(gulp.dest("build/js"))
+  .pipe(rename("script.min.js"))
   .pipe(uglify())
   .pipe(gulp.dest("build/js"));
 });
